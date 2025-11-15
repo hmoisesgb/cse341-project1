@@ -32,7 +32,7 @@ const createContact = async(req, res) => {
     };
     const response = await mongodb.getDatabase().db().collection('contacts').insertOne(contact);
     if (response.acknowledged){
-        res.status(204).send();
+        res.status(201).send();
     }
     else
     {
